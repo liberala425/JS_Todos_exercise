@@ -1,7 +1,6 @@
 const todoform = document.querySelector("#todoform");
 const todoList = document.querySelector('#results');
 const todoInput = document.querySelector('input[name="todo"]');
-const currenTodDoList = [];
 
 todoform.addEventListener('submit', function(e){
     e.preventDefault();
@@ -18,8 +17,7 @@ todoform.addEventListener('submit', function(e){
     newToDo.append(completeBtn);
     newToDo.append(removeBtn)
     todoList.append(newToDo);
-    currenTodDoList.push(newToDo);
-    localStorage.setItem("currenTodDoList", JSON.stringify(currenTodDoList));
+    
 })
 
 
